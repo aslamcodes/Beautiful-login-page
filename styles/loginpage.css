@@ -138,27 +138,5 @@ label span {
 }
 input:focus + label span,
 input:not(:placeholder-shown) + label span {
-  transform: translate(-5px, -40px);
-}
-
-input:not(:placeholder-shown):focus + label span {
-  /* transform: translateY(-50px); */
-  animation: woble 0.3s;
-}
-
-@keyframes woble {
-  from {
-    transform: translate(-5px, -40px);
-  }
-
-  50% {
-    transform: translateY(-50px);
-  }
-
-  to {
-    transform: translate(-5px, -40px);
-  }
-}
-
-label {
+  transform: translateY(-35px);
 }
