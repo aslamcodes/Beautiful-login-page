@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --lighter-color: #ffeedb;
+  --light-color: #ffd8cc;
+  --dark-color: #ffbd9b;
+  --darker-color: #0a1d37;
+}
+
+body {
+  font-family: "Roboto";
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  background-image: url("https://wallpaperaccess.com/full/378016.jpg");
+  position: absolute;
+  top: 0;
+  top: -30px;
+  left: -30px;
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
+  min-width: 100%;
+  z-index: -100;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  padding: 50px;
+  border-radius: 25px;
+  margin: 0;
+}
+
+.form-container-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+  top: 0;
+  left: 0;
+  z-index: -100;
+  border-radius: 25px;
+  margin: 0;
+  padding: 0;
+  filter: blur(3px);
+}
+
+.form-control {
+  position: relative;
+  margin: 50px 0;
+}
+/* Form Elements */
+.form-container h1 {
+  color: var(--darker-color);
+}
+/* Submit button */
+.btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+  text-decoration: none;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 19px;
+  border-radius: 15px;
+  color: black;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+  background-color: black;
+  transform: scale(1.1);
+  color: white;
+}
+
+.btn:active {
+  transform: scale(1.2);
+}
+.text {
+  font-size: 20px;
+}
+
+.text a {
+  color: var(--darker-color);
+  text-decoration: none;
+}
+
+input {
+  display: block;
+  background-color: transparent;
+  width: 250px;
+  border: none;
+  border-bottom: 2px solid;
+  height: 30px;
+  font-size: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+label span {
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  min-width: 5px;
+  font-size: 18px;
+}
+
+label span {
+  transition: all 0.3s ease;
+}
+input:focus + label span,
+input:not(:placeholder-shown) + label span {
+  transform: translate(-5px, -40px);
+}
+
+input:not(:placeholder-shown):focus + label span {
+  /* transform: translateY(-50px); */
+  animation: woble 0.3s;
+}
+
+@keyframes woble {
+  from {
+    transform: translate(-5px, -40px);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: translate(-5px, -40px);
+  }
+}
+
+label {
+}

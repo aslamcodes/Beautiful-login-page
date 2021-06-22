@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  font-family: "Roboto";
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -30px;
+  bottom: -30px;
+  height: calc(100%+60px);
+  width: calc(100% + 60px);
+  background-image: url("../images/BIT.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.nav {
+  display: flex;
+
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 100%;
+}
+
+.title {
+  flex-shrink: 0;
+  display: inline;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.nav .nav-items {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.custom-select select {
+  color: #ffc107;
+  width: 250px;
+  margin: 0 10px;
+  margin-top: 25px;
+  background: url(https://img.icons8.com/pastel-glyph/24/000000/expand-arrow.png)
+    no-repeat right;
+
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid #ffc107;
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+.first-selection,
+.second-selection {
+  margin: 5%;
+}
